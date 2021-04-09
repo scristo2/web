@@ -1,0 +1,21 @@
+SiteGround utiliza autenticación SSH basada en clave en lugar de nombre de usuario y contraseña simples. El puerto SSH en los servidores de SiteGround es 18765 en lugar del puerto predeterminado 22.
+
+Para conectarte a tu cuenta de hosting compartido a través de SSH usando PuTTY, descarga e instala PuTTY, Pageant y Puttygen desde este enlace.
+
+Una vez completes la instalación del software, deberás generar un par de claves SSH desde Site Tools > Desarrolladores > Gestor claves SSH -> Crear.
+
+Nota: Si usas Puttygen 0.70, ten en cuenta que no acepta contraseñas que contengan caracteres especiales tales como “&”, “[“, “]”, “{“, “}”.
+
+Rellena los campos obligatorios y presiona Crear. Luego, desde la sección “Gestionar claves SSH”, ve al menú de 3 puntos > Clave privada. Haz clic en Copiar al portapapeles y guárdala en un nuevo archivo llamado private_key.ppk en tu ordenador.
+
+Después de instalarlos, inicia puttygen.exe y navega a File > Load Private Key, busca tu clave privada, ábrela e introduce la contraseña. La contraseña fue especificada durante la generación del par de claves SSH en Site Tools.
+
+Si todo se ha hecho correctamente recibirás un mensaje que dice Successfully imported foreign key. Haz clic en Save private key y selecciona el formato (*.ppk) para el archivo.
+
+Haz clic derecho en el archivo private key y selecciona “Load in Pageant”. Alternativamente, puedes abrir pageant.exe y cargar tu clave privada. Es posible que se te solicite la contraseña de tu clave.
+
+Inicia putty.exe e introduce los siguientes detalles de conexión en la categoría Sessions:
+
+    Hostname – introduce el host/IP del servidor al que deseas conectarte (ej. siteground300.com)
+    Port – el puerto de la conexión – usa 18765
+    Protocol – SSH
