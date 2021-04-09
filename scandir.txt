@@ -1,0 +1,5 @@
+#obtener los ficheros de una carpeta
+
+$ficheros = scandir("#");
+
+print_r($ficheros);

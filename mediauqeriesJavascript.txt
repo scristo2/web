@@ -1,0 +1,18 @@
+function sizeContentUnderSixHundred(x){
+
+      if(x.matches){
+
+         
+      }
+
+
+
+var minSixThousand = window.matchMedia("(min-width: 600px)");
+  var monOneThousand = window.matchMedia("(min-width: 1100px)");
+  var underSixHundred = window.matchMedia("(max-width: 599px)");
+  sizeContentMinSixThousand(minSixThousand);
+  sizeContentMinOneThousandAndHundred(monOneThousand);
+  sizeContentUnderSixHundred(underSixHundred);
+  minSixThousand.addListener(sizeContentMinSixThousand);
+  monOneThousand.addListener(sizeContentMinOneThousandAndHundred);
+  underSixHundred.addListener(sizeContentUnderSixHundred);

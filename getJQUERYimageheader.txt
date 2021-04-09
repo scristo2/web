@@ -1,0 +1,2 @@
+#obtener image background url
+ if($('header').css("backgroundImage").includes('fondo')

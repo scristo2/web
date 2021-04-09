@@ -1,0 +1,15 @@
+<meta http-equiv="content-type" content="text.html" charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="author" content="Sergio Cristobal Colino">
+    <meta name="description" content="Welcome to erika codes, a site where you can save and share your code for you can work easier">
+    <meta name="keywords" content="api, apis, crypto, futbol, bitcoin, ethereum, php, html, css, github, code, codes, php, css, html, python, javascript, java">
+    <meta name="robots" content="index"/>
+    <link rel="icon" 
+      type="image/png" 
+      href="">
+    <title>erika codes</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>

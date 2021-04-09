@@ -1,0 +1,35 @@
+# parent construct
+
+class persona{
+
+    private $nombre;
+    private $apellido;
+
+    public function __construct($nombre,$apellido){
+        $this->nombre = $nombre;
+        $this->apellido = $apellido;
+    }
+
+    public function getnombre(){
+        echo $this->nombre;
+    }
+
+
+}
+
+
+class animal extends persona{
+
+    private $raza;
+    private $color;
+
+    public function __construct($nombre,$apellido,$raza,$color){
+
+        parent::__construct($nombre,$apellido);
+        $this->raza = $raza;
+        $this->color = $color;
+    }
+}
+
+$perro = new animal("roonie","brasileiro","fila","marron");
+$perro->getnombre();

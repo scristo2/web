@@ -1,0 +1,26 @@
+##recuerda que se puden conectar con mas bases de datos a la vez
+
+try {
+    $pdo = new PDO("mysql:host=" . $hostname . ";" . "dbname=" . $database,$username,$password);
+    $pdo2 = .........................
+
+    $sql = $pdo->prepare("SELECT * FROM `register` WHERE `email`='$email'");
+
+    if($sql->fetch() > 0){
+        echo "si hay resultados";
+    }else{
+        echo "no hay resultados";
+    }
+    
+
+    $pdo = "";
+    
+} catch (PDOException $e) {
+  
+    die($e->getMessage());
+}
+
+
+$aa = $pdo->exec("DELETE FROM `register` WHERE `email`='$email'");
+
+  echo $aa; #da el numero de filas elimandas,en este caso 1

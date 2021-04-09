@@ -1,0 +1,37 @@
+en php file size te loda en bites,5 bits son 5000000 mb
+
+<div id="container">
+      <form action="/subir-ficheros/form-ficheros" method="post" enctype="multipart/form-data">
+         <input type="file" accept="image/*" id="file" class="form" name="file">
+         <br>
+         <input type="password" id="password" class="form" placeholder="Introduce contraseña">
+         <br>
+         <input type="submit" id="subir" name="subir" value="subir archivo" >
+    </form>
+
+$basename = $_FILES['file']['name'];
+$size = $_FILES['file']['size'];
+$temporal = $_FILES['file']['tmp_name'];
+$tipo = $_FILES['file']['type'];
+$destino = $_SERVER['DOCUMENT_ROOT']."/imagenes/$basename";
+if(!file_exists($_SERVER['DOCUMENT_ROOT']."/imagenes/$basename"))){
+    
+    if($size < 5000000){
+
+        if($tipo === "image/png" || $tipo === "image/jpg"){
+            
+            if(move_uploaded_file($_FILES['file']['tmp_name'],$destino)){
+                echo "el archivo se ha subido correctamente";
+            }else{
+                echo "No se ha podido subir el archivo";;
+            }
+        }else{
+            echo "ese tipo de formato no se puede subir";
+        }
+    }else{
+        echo "La imagen es demasiado grande";
+    }
+}else{
+    echo "ya hay un archivo con ese nombre";
+}
+?>

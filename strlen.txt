@@ -1,0 +1,5 @@
+#count character
+
+$texto = "mi nombre es ";
+
+$total = strlen($texto);

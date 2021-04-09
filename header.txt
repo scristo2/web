@@ -1,0 +1,19 @@
+#no me funcionaba el header, obstart es para prepara el buffer su salida
+
+ob_start();
+require $_SERVER['DOCUMENT_ROOT'] . "/me.php";
+require $_SERVER['DOCUMENT_ROOT'] . "/sori.php";
+
+echo $_SERVER['REQUEST_URI'] . "<br>";
+
+$aa = preg_match("/ipKey=(\w+\W\w+\W\w+\W\w+)/", $_SERVER['REQUEST_URI'], $result); #ipkey
+$bb = preg_match("/username=(\w+)/", $_SERVER['REQUEST_URI'], $result2); #username
+$cc = preg_match("/apikey=(\w+)/", $_SERVER['REQUEST_URI'], $result3); #api key
+$ipKey = $result[1];
+$user = $result2[1];
+$apikey = $result3[1];
+
+$redirect = Bot::CreateFileJsonCripto($host, $username, $passwDatabase, $database, $ipKey, $user, $apikey, Bot::GetTime()['completa']);
+
+header("Location: /account/$redirect");
+exit();

@@ -1,0 +1,87 @@
+marquee onmouseover="this.stop();" behavior="scroll" onmouseout="this.start();" scrolldelay="300" direction="left">
+<table><th><img src="/images/header/phone.png" alt="image phone icon" width="25" height="25" 
+ class="img-slider"></th><th><p>91 351 28 87</p></th><th><img src="/images/header/mail.png" alt="image mail icon" width="25" height="25" class="img-slider"></th> <th><p>perfibesa@perfibesa.com</p></th><th><img src="/images/location.png" alt="image location icon" width="25" 
+  height="25" class="img-slider"></th><th><p>c/ Angel Barajas, 4. Bajo B, 28224 Pozuelo de Alarcón. Madrid</p></th></table
+</marquee>
+
+<<<<<marquee esta descatalogado y no se recomienda,vamos a usar css con 
+La propiedad animation() de CSS es una propiedad abreviada (shorthand property) para animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count y animation-direction.
+
+.marquee{
+
+        width: 50%;
+        background-color: #ffc7b9;
+        left: 25%;
+        overflow: hidden;  ##muy importante
+    }
+
+
+    .marquee > *{
+        
+        
+                                
+                             La propiedad animation de CSS es una propiedad abreviada 
+                  (shorthand property) para animation-name, animation-duration, animation-timing-function, animation-delay,
+                   animation-iteration-count y animation-direction                               
+
+         transform: translateX(100%);
+         -webkit-transform: translateX(100%);
+         -moz-transform: translateX(120%);
+         animation: datas 20s linear infinite normal;
+         -webkit-animation: datas 20s linear infinite normal;
+         -moz-animation: datas 20s linear infinite normal;
+         text-align: center;
+        
+        
+    }
+
+
+    @keyframes datas{
+         
+         0%{
+
+            transform: translateX(100%);
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+         }
+
+
+         100%{
+
+            transform: translateX(-100%);
+            -moz-transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+         }
+    }
+
+
+    @-webkit-keyframes datas{
+
+         0%{
+
+            -webkit-transform: translateX(100%);
+         }
+
+
+         100%{
+
+            -webkit-transform: translateX(-100%);
+         }
+    }
+
+
+    @-moz-keyframes datas{
+
+            
+        0%{
+
+            -moz-transform: translateX(100%);
+        }
+
+
+        100%{
+
+            -moz-transform: translateX(-100%);
+        }
+
+    }

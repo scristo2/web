@@ -1,0 +1,34 @@
+<?php
+
+#muy importante si quieres el codigo el  curl_setopt($code, CURLOPT_RETURNTRANSFER, 1);
+#crea un fichero con open para leer el codigo
+
+
+ $cliente = curl_init();
+ curl_setopt($cliente,CURLOPT_URL,'https://molestator.com/login');
+ curl_setopt($cliente,CURLOPT_POST,1);
+ curl_setopt($cliente,CURLOPT_POSTFIELDS,"email=sergio_colino_c@hotmail.com&password=musico");
+ curl_setopt($cliente,CURLOPT_HEADER,1);
+ curl_setopt($cliente,CURLOPT_COOKIEJAR,"cookies.txt");
+ curl_setopt($cliente,CURLOPT_COOKIEFILE,"cookies.txt");
+ curl_setopt($cliente, CURLOPT_HTTPHEADER, array("Cache-Control: no-cache"));
+ curl_setopt($cliente,CURLOPT_FRESH_CONNECT,1);
+ $result =curl_exec($cliente);
+ $info = curl_getinfo($cliente);
+ curl_close($cliente);
+ print_r($info);
+ 
+$file = $_SERVER['DOCUMENT_ROOT'] . "/cookies.txt";
+
+ $cookies = file_get_contents($file);
+
+ if(strpos($cookies,"correc") !== false ){
+     unlink($file);
+     echo "estas en la cuenta";
+ }else{
+
+    unlink($file);
+    echo "login incorrecto";
+ }
+
+?>

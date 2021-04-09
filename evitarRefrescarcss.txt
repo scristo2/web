@@ -1,0 +1,15 @@
+La propiedad CSS overscroll-behavior establece lo que hace un navegador cuando alcanza el límite de un área de desplazamiento. 
+Es una taquigrafía para overscroll-behavior-x y overscroll-behavior-y.
+
+La propiedad toma tres valores posibles:
+
+    auto : predeterminado. El scroll que se origina en el elemento puede propagarse a elementos hijos.
+    contain - evita el encadenamiento de desplazamiento (scroll chaining). El comportamiento predeterminado de desbordamiento de desplazamiento se observa dentro del elemento en el que se establece este valor (por ejemplo, efectos de "rebote" o actualizaciones), pero no se produce un encadenamiento de desplazamiento a las áreas de desplazamiento vecinas, por ejemplo, los elementos subyacentes no se desplazarán.
+    none , igual que contain, pero no se produce el encadenamiento de desplazamiento a las áreas de desplazamiento vecinas, y se evita el comportamiento predeterminado de desbordamiento de desplazamiento.
+
+html, body{
+
+    height: 100%;
+    overscroll-behavior: contain;
+   
+}

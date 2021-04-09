@@ -1,0 +1,27 @@
+#box-sizing: border-box lo que hace que le pones un width y aunque luego la añades padding o border el total de tdoo el ancho va a ser el width
+
+#pseudo elements
+
+::before y ::after es como si crearas dos divs mas dentro della propiedad
+
+#container h2{
+
+          color: red;
+
+       }
+
+
+       #container h2::before{
+
+          content: 'hello ';
+       }
+
+
+       #container h2::after{
+
+          content: '';
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-color: white;
+       }

@@ -1,0 +1,7 @@
+#quitar letras a un string
+
+$word = "me encanta el futbol";
+$result = substr($word,0,-7); //le quita las 7 ultimas.
+
+$num = "1";
+$int = (int)$num;

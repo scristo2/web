@@ -1,0 +1,13 @@
+#lo que hace box shixin border box esque aunque le pongas 10 px de border,va a medir el width que le hayas puesto
+.container{
+    
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+    border: 10px solid orange;
+    box-sizing: border-box;
+    padding: 10px;
+}

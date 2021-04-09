@@ -1,0 +1,11 @@
+coarse->movil ->El mecanismo primario de entrada incluye un dispositivo de apuntamiento de precisión limitada.
+fine->raton->El mecanismo de entrada principal incluye un dispositivo de apuntamiento preciso.
+none->El mecanismo de entrada principal no incluye un dispositivo apuntador.
+
+if(window.matchMedia("(pointer: coarse)").matches){
+
+            alert("movil");
+}else{
+
+  alert('ordenador');
+ }

@@ -1,0 +1,16 @@
+function getBitcoin(){
+     
+    $url = "https://bitpay.com/api/rates";
+    $json = json_decode(file_get_contents($url));
+    foreach($json as $obj){
+    
+        if($obj->code == 'EUR'){
+    
+           return   (double)$obj->rate; //bitcoin
+        }
+        
+        
+    }//end foreach
+
+        
+    }//end getBitcoin()

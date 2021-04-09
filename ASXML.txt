@@ -1,0 +1,18 @@
+#importante as->XML();
+
+$api = "31b2285a0ed24cf9afa0079ee291c456";
+$url = "https://api.sandbox.namecheap.com/xml.response?ApiUser=moles75&ApiKey={$api}&
+UserName=moles75&ClientIp=92.118.13.151&Command=namecheap.domains.check&Domain,List=domain1.comdomain2.com";
+
+$url2 = "https://api.namecheap.com/xml.response?ApiUser=moles75&ApiKey={$api}&UserName=moles75&
+Command=namecheap.domains.check&ClientIp=192.168.1.109&
+DomainList=us.xyzList=us.xyz";
+
+$code = simplexml_load_file($url2);
+
+
+print_r($code);
+
+$xx = fopen($_SERVER['DOCUMENT_ROOT'] . "/code.xml","a");
+fwrite($xx,$code->asXML()); <---------
+fclose($xx);

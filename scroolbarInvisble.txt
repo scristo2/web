@@ -1,0 +1,12 @@
+#invisible scroll bar
+.content{
+    /*firefox scrollbar invisible*/ 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+.content::-webkit-scrollbar{
+    /*chrome safari*/
+    display: none;
+}

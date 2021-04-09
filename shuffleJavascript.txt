@@ -1,0 +1,3 @@
+#shuffle array
+ var list = ['/images/header/fondoPerfibesa.jpg', '/images/header/spanish.png'];
+ list.sort((a,b) => 0.5 - Math.random());

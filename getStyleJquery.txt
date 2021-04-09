@@ -1,0 +1,7 @@
+var color = $('#number').css('color');
+alert(color);
+<<<<<rgb(0,0,0);
+
+var color = $('#number').css('fontSize');
+alert(color);
+<<<< 18.75px

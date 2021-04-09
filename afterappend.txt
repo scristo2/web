@@ -1,0 +1,6 @@
+#despues de crear un boton con append en jquery si quieres que haga una funcuon usa esto
+
+$('body').delegate("#soci", 'click', function(){
+
+             #function
+        });

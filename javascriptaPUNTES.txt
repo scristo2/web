@@ -1,0 +1,16 @@
+$("#img-search").mouseover(function(){
+            
+             if(window.innerWidth >= 600){
+
+                alert('aaa');
+             }
+
+        });
+       
+    }
+
+
+
+if (window.getComputedStyle(x).display === "none") {
+    // Do something..
+  }

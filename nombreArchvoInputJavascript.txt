@@ -1,0 +1,12 @@
+  input hidden
+$("#upload1").on("click", function(){
+
+                $("#upload").click();
+        });
+         
+           #get name input hidden selcect
+
+        $("#upload2").on("click", function(){
+
+                alert($('#upload[type=file]').val());
+        });

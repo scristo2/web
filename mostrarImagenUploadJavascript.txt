@@ -1,0 +1,12 @@
+#esta es la forma antigua y que es compatible con todos los navegadores,
+hay otra que es readfiles pero con internet explorer 8 x ejemplo no es.pero readfiles es la opcion mas nueva
+
+$(document).ready(function(){
+
+     $("#file").change(function(event){
+
+          var preview = document.getElementById('preview');
+          preview.src = URL.createObjectUrl(event.target.files[0]);
+      });
+
+});

@@ -1,0 +1,38 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f 
+RewriteRule ^(.*)$ $1.php
+
+#redirigir errores 403,404 a pagina error echa por mi
+
+ErrorDocument 404 https://molestator.com
+
+ErrorDocument 403 https://molestator.com
+
+#para que no puedan ver los directorios
+<IfModule mod_rewrite.c>
+  <IfModule mod_negotiation.c>
+     Options -Multiviews -Indexes
+     </IfModule>
+</IfModule>  
+
+
+
+
+#url amigables
+
+Options +FollowSymLinks ----esto
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REMOTE_ADDR} !^83.55.203.202 
+RewriteCond %{REMOTE_ADDR} !^94.242.231.195                    >>>redirige a todas las ip a temporal menos a esas dos ip
+RewriteCond %{REQUEST_URI} !/temporal.php$ [NC]
+RewriteRule .* /temporal.php [R=302,L]
+</IfModule>
+
+RewriteRule ^payments-more10000-apis/(.*)$ payments-more10000-apis.php?username=$1 --esto

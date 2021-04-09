@@ -1,0 +1,4 @@
+static denigedClickButtonRight(){
+
+       document.oncontextmenu = function(){return false;}
+    }

@@ -1,0 +1,19 @@
+class Bot{
+
+
+      public static function tranlateWords($langua){
+
+         $GLOBALS['test'] = "aiaa";
+      }
+}
+
+
+#imagenimos otro archivo
+
+require $serve........
+
+Bot::translateWords('');
+
+echo $test;
+
+<<<<<aiaa

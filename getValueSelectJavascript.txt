@@ -1,0 +1,8 @@
+#coger valor selct option en javascript
+
+var aa = aa.options[aa.selectedIndex].value;
+
+----------cambiar valor option select
+var aa = document.getElementById('choose');
+aa.options[aa.selectedIndex].value = 'chino';
+$('.form-language').submit();

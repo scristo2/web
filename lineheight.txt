@@ -1,0 +1,7 @@
+.first p{
+
+  line-height: 2em
+
+}
+
+por ejemplo para separar los parrafo de un texto

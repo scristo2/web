@@ -1,0 +1,7 @@
+#no imprime hola hasta que se lo digo con la varible, y se puede usar con condiconales y demas
+ob_start();
+echo "hola";
+$salida1 = ob_get_contents();
+ob_end_clean();
+
+echo $salida1;

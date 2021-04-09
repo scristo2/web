@@ -1,0 +1,14 @@
+opaciti:0.9 por de bajo de 1 es tranparente
+
+$(".a-screen").hover(function(){
+
+          $(this).css("color", "red");
+
+                }, function(){
+
+              $(this).css("color", "white");
+
+          });
+
+
+@import url("/style/index/content.css");

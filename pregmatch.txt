@@ -1,0 +1,21 @@
+$texto = "me llamo sergio y tengo 27 años";
+
+$result = preg_match("/^[a-z]+.[a-z]+.[a-z]+.[a-z]/", $texto, $aa);
+
+
+#aqui es al reves que python, las expresiones siempre entre / /
+
+.->espacio o cualquier caracter
+
+
+#todo lo que esta apartir de td
+$result = preg_match_all("/<td>(.*)/", $texto, $arreglo);
+
+
+
+#al final es como en python, en este caso al imprimir el valor se le pone un 1 porque el cero recoge ipkey ya que es el pregmatch, el 1 coge el match que en este caso 
+es tod apartir de ipkey=
+
+$aa = preg_match("/ipKey=(\w+\W\w+\W\w+)/", $_SERVER['REQUEST_URI'], $result); #ipkey
+
+echo $result[1];  

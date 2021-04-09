@@ -1,0 +1,33 @@
+$str = "Hello Friend";
+
+$arr1 = str_split($str);
+$arr2 = str_split($str, 3);
+
+print_r($arr1);<<<< 
+h
+e
+l
+l
+o
+f
+r
+i
+e
+n
+d
+
+
+print_r($arr2);
+
+hel
+lo
+fri
+end
+
+
+--------------
+$pizza  = "porción1 porción2 porción3 porción4 porción5 porción6";
+$porciones = explode(" ", $pizza);
+echo $porciones[0]; // porción1
+echo $porciones[1]; // porción2
+

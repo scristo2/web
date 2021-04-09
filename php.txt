@@ -1,0 +1,60 @@
+ mysqli
+
+$sql = "SHOW TABLES LIKE `%`"; //te da si tiene o esta vacia;
+$list = array_column(mysqli_fetch_all($conn->query('SHOW TABLES')),0); //en esta aray te da todas las tabals de la base de datos
+
+--show name databases
+
+$conn = mysqli_connect("localhost","root","") or die("error");
+$sql = "SHOW DATABASES";
+$result = $conn->query($sql) or die("error 2");
+while($row = mysqli_fetch_array($result)){
+     $barra = "/";
+     $indice = strpos($row[0],$barra);
+     if($indice !== false){
+         echo $row[0];
+     }
+}
+
+##ORDER BY 
+
+$sql = "SELECT * FROM `$turno` ORDER BY `id` DESC";
+
+
+##if is ebview,moble android or iphone or computer
+
+$isWebView = false;
+if((strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile/') !== false) && (strpos($_SERVER['HTTP_USER_AGENT'], 'Safari/') == false)) :
+       $isWebView = true;
+elseif(isset($_SERVER['HTTP_X_REQUESTED_WITH'])) :
+       $isWebView = true;
+endif;
+
+if(!$isWebView){
+    echo "es un anavegador normal";
+    if(strpos($_SERVER['HTTP_USER_AGENT'],"Android") !== false){
+       header("Location: https://play.google.com");
+       $_SESSION['device'] = true;
+    }
+    
+     if(stripos($_SERVER['HTTP_USER_AGENT'],"iphone") !== false ||stripos($_SERVER['HTTP_USER_AGENT'],"ipod") !== false
+     ||stripos($_SERVER['HTTP_USER_AGENT'],"ipad") !== false ){
+       header("Location: https://play.google.com");
+       echo "apple";
+       $_SESSION['device'] = true;
+    }
+
+}else{
+    echo "es una app";
+}
+
+##ip
+
+ $clientIP = $_SERVER['HTTP_CLIENT_IP'] 
+    ?? $_SERVER["HTTP_CF_CONNECTING_IP"] # when behind cloudflare
+    ?? $_SERVER['HTTP_X_FORWARDED'] 
+    ?? $_SERVER['HTTP_X_FORWARDED_FOR'] 
+    ?? $_SERVER['HTTP_FORWARDED'] 
+    ?? $_SERVER['HTTP_FORWARDED_FOR'] 
+    ?? $_SERVER['REMOTE_ADDR'] 
+    ?? '0.0.0.0';

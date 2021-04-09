@@ -1,0 +1,22 @@
+.span0{
+
+    animation: marquee 3s linear infinite alternate;
+    
+    
+}
+
+
+@keyframes marquee{
+
+   from{
+
+    color: green;
+    font-size: 10.72px;
+   }
+
+   to{
+
+    color: red;
+    font-size: 32px;
+   }
+}

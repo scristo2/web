@@ -1,0 +1,11 @@
+#jquery @media queries
+
+$(window).resize(function(){
+
+       if ($(window).width() <= 320) {  
+
+              // is mobile device
+
+       }     
+
+});

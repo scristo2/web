@@ -1,0 +1,26 @@
+#static function in class without to need an object
+
+class bot{
+
+  public static function hola(){
+     
+    echo "hello world";
+}
+}
+
+bot::hola();
+
+
+class persona{
+
+    static function saludar(){
+
+        print('estoy saludando');
+    }
+
+    static function main(){
+
+        self::saludar();
+    }
+}
+persona::main();

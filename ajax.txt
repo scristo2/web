@@ -1,0 +1,23 @@
+##ajax form 
+
+$("#mensaje").submit(function(e){
+
+          e.preventDefault()
+          $.ajax({
+              type: 'POST',
+              url: 'insertMessage.php',
+              data: $(this).serialize(),
+              success: function(response){
+                 var texto = document.getElementById("texto");
+                 texto.value = ""; 
+                 $("#texto").trigger('focus');
+                 dialogo.scrollTop = dialogo.scrollTop;
+                 
+              },
+              error: function(){
+                  alert("No se ha podido enviar el mensaje:).Intentelo de nuevo");
+              }
+          });
+
+          // finalizate ajax
+      });
