@@ -1,0 +1,13 @@
+1º-accedemos a la carpeta desde la terminal.
+2º-escribimos (git clone) mas la url del projecto ej https://github... que se puede obtener en github.
+
+--subir archivo creado nuevo,accedmos desde la terminal a la carpeta que se ha clonado
+usamos (git status) para ver todos los archivos nuevos que hemos editado 
+luego usamos (git add) mas el nombre del archivo ej orders.txt(aqui el archivo no se ha subido todavia a github
+pero esta en  en estado stagin area,que se puede observar en el diagrama de git, se puede buscar en google
+este diagrama).Si despues de esto queremos volverlo a editar,edimatos el archivo y escribimos en comando
+(git diff) y mostrara el codigo que es nuevo al que hemos subido antes,podemos volver a escribir (git add)
+mas el nombre del archivo o se pone (git add . ) para que suba todo lo nuevo.
+luego  escribimos en la terminal (git commit) o mejor (git commit -m "y aqui un comentario,ola version del codigo
+o demas informacion")
+y ya par asubir a git escribimos en la terminal (git push) y ya esta subido
