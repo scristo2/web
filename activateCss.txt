@@ -1,0 +1,5 @@
+#por ejemplo cuando pulses el enlace se pondra rojo cuando hagas click y volvera a su estado normal cuando acabe el click,
+esto tambien con inputs y demas
+a:activate{
+   color: 'red':
+}
