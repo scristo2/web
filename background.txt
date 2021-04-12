@@ -1,0 +1,6 @@
+header{
+
+     height: 100px;
+     background: no-repeat center/100% url("/images/header/logo-perfibesa.png") ;
+     
+}
