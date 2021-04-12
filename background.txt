@@ -1,6 +1,10 @@
-header{
+.principal{
 
-     height: 100px;
-     background: no-repeat center/100% url("/images/header/logo-perfibesa.png") ;
+     height: 300px;
+     -webkit-animation: principal 10s linear infinite normal;
+     animation: principal 10s linear infinite normal;
+     -ms-animation:principal 10s linear infinite normal;
+     -moz-animation: principal 10s linear infinite normal;
+     background: url("/images/header/maquina.jpg") no-repeat 0px 0px / 100% 100%; //0px en x 0px en y / 100%  width y 100% height
      
 }
