@@ -3,8 +3,8 @@ require_once('vendor/autoload.php');
 
 $stripe = [
 
-    "public" => 'pk_test_51INCURJRR6m2mhvP0V1d6TQkspOBKXQFZoYGsgR39iz3d44JwUoPyxFMhGNoxZG8HP9Zj0KeWHiez88g2CXOcJNr00p9V4wEjd',
-    "private" => 'sk_test_51INCURJRR6m2mhvPKfCgiUCZuDEMsvrdSI4Oy0IRqsGHBQKmXl7Wwqu6d0UIUDVBJxghKMdZfJ4mp3bEC0gd9Sf800QNjyvnFX',
+    "public" => '',
+    "private" => '',
 
 ];
 
