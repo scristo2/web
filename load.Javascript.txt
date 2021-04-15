@@ -1,0 +1,14 @@
+<script type="text/javascript">
+    window.onload = function(){
+        
+    
+    setInterval(() => {
+      var p = document.querySelector('#text');
+    req = new XMLHttpRequest();
+    req.open("GET", "/public_html/test.php", false);
+    req.send(null);
+      p.innerHTML = req.responseText;  
+    }, 1000);
+
+    };
+  </script>
