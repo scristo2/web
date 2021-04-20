@@ -1,0 +1,5 @@
+window.addEventListener('mousemove',function(){
+
+     //person.style.marginLeft = event.clientX + 'px';
+     //person.style.marginTop = event.clientY + 'px';
+});
