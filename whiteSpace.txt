@@ -1,0 +1,13 @@
+.content{
+    
+   position: absolute;
+   width: 100px;
+   height: 50px;
+   border-bottom: 1px solid black;
+   overflow: auto;
+   top: calc(50% - 25%);
+   left: calc(50% - 25%);
+   background-color: grey;
+   white-space: nowrap; //buscar white space en internet
+
+}
