@@ -21,3 +21,30 @@ $("#mensaje").submit(function(e){
 
           // finalizate ajax
       });
+      
+      
+      
+      
+    //en caso de que se cree un boton y se haga atraves de el volver a llmar a la funcion submit del jquery
+    $('#xx').on('click', function(){
+
+                $('#form').submit(function(e){
+
+                      e.preventDefault();
+
+                      $.ajax({
+                           
+                           type : 'post',
+                           url : 'test.php',
+                           data: $(this).serialize(),
+                           success: function(response){console.log(response)},
+                           error: function(){console.log('error en el ajax')}
+
+                      });
+
+                });
+
+
+                $('#form').submit(); /////very important again after 
+
+          });
