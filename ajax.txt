@@ -1,5 +1,7 @@
 ##ajax form 
 
+******leer el de abajo
+
 $("#mensaje").submit(function(e){
 
           e.preventDefault()
@@ -30,8 +32,6 @@ $("#mensaje").submit(function(e){
 
                 $('#form').submit(function(e){
 
-                      e.preventDefault();
-
                       $.ajax({
                            
                            type : 'post',
@@ -41,6 +41,12 @@ $("#mensaje").submit(function(e){
                            error: function(){console.log('error en el ajax')}
 
                       });
+                      
+                       e.preventDefault();
+
+                      $('#form').unbind('submit');////muy importante para que no se enve mas de una vez cuando se le da al boton
+                      
+                      return false; ///important!!!!
 
                 });
 
