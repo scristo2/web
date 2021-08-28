@@ -1,0 +1,8 @@
+     
+        $('.App-content-second').load("/src/server/chatGenerale.php", {limit:0}, function(response, status, xhr){
+                  //status{error, success}
+            if(status == "error"){
+
+                 $('.App-content-second').append("<p>An occured an error : " + xhr.status + "</p>"); //{xhr.status, xhr.statusText} 
+            }
+        });
