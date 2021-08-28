@@ -1,0 +1,2 @@
+$('.App-content-second').on('wheel', function(){alert('wheel')});
+$('.App-content-second').on('touchstart', function(){alert('touch')});
