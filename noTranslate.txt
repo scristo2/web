@@ -1,0 +1,2 @@
+##if you write in classs or subclass notranslate that google not translate that
+$('.App-content').append("<div class='App-content-second notranslate'><p class='errorChat'></p></div>");
