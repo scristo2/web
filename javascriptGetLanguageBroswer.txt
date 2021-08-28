@@ -1,0 +1,1 @@
+var userLanguage = navigator.language||navigator.userLanguage; //es-ES
