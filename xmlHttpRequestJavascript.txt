@@ -4,3 +4,20 @@ xhr.onreadystatechange = function(){ //has a some status code,when change get
   console.log(this.response);
 };
 xhr.send();##send to server to url destiny
+
+
+####get json
+ var xhr = new XMLHttpRequest();
+
+ xhr.open('POST', 'test.json', true);
+
+ xhr.responseType = 'json';
+
+ xhr.onreadystatechange = function(){
+
+     if (this.readyState == 4 && this.status == 200) {
+          console.log(this.response['primero']);
+      }
+  };
+
+ xhr.send();
