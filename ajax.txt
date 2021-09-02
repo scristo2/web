@@ -54,3 +54,24 @@ $("#mensaje").submit(function(e){
                 $('#form').submit(); /////very important again after 
 
           });
+          
+###get code page
+   ####very important, write in the other file from the other web 
+   header("Access-Control-Allow-Origin: *");
+   
+   
+function getData(){
+
+                  $.ajax({
+                     
+                      url : 'https://serveratlantic.com',
+                      type : 'GET',
+                      cache : false,
+                      success: function(response){console.log(response)},
+                      error : function(error){console.log(error)}
+                    
+                  });
+              }
+
+              getData();
+
