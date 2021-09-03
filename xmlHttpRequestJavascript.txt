@@ -1,3 +1,5 @@
+#read all bellow
+
 var xhr = new XMLHttpRequest();
 xhr.open('POST', 'https://serveratlantic.com', true);
 xhr.onreadystatechange = function(){ //has a some status code,when change get
@@ -42,3 +44,9 @@ xhr.send();##send to server to url destiny
   }
 
  xhr.send();
+
+
+####fecth
+--json
+fetch("test.json").then(response => response.json())
+.then(data => console.log(data['coches']['mercedes']['claseA'][0]['claseA2001']['motor']));
