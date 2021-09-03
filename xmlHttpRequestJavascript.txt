@@ -21,3 +21,24 @@ xhr.send();##send to server to url destiny
   };
 
  xhr.send();
+
+
+###get vslue xml
+ var xhr = new XMLHttpRequest();
+ xhr.open('GET', 'test.xml');
+ xhr.responseType = 'document';
+ xhr.onreadystatechange = function(){
+
+   if(this.readyState == 4 && this.status == 200){
+
+                     var xml = xhr.responseXML; ###very important
+
+                     var ss = xml.getElementsByTagName('terminator')[0];
+
+                     console.log(ss.getElementsByTagName('recaudation')[0].innerHTML);
+                       
+                     
+     }
+  }
+
+ xhr.send();
