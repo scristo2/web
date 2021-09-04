@@ -1,0 +1,15 @@
+###blob
+
+             fetch('../README.md')
+             .then(reponse => reponse.blob())
+             .then(blob => {
+
+                  let url = URL.createObjectURL(blob);
+                  let image = document.querySelector('#ss');
+                  
+                  image.href = url;
+
+                  
+             });
+
+             ##te cambia la url,ejemplo esque el enlaze te redirige hasta el readme.md con una url local que no se ve tu ruta
