@@ -13,3 +13,20 @@
              });
 
              ##te cambia la url,ejemplo esque el enlaze te redirige hasta el readme.md con una url local que no se ve tu ruta
+
+
+###get code html append 
+fetch('test11.html')
+            .then(response => {
+
+                if(!response.ok){
+                    throw('error');
+                }else{
+
+                    response.text();
+                }
+            }).then(text => {
+
+                 console.log(text);
+                 
+            }).catch(function(error){alert(error)});
