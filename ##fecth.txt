@@ -33,3 +33,29 @@
                  console.log(text);
 
             }).catch(function(error){alert(error)});
+            
+##send form data without form without refresh like ajax
+const send = document.querySelector('#send');
+
+              send.addEventListener('click', function(e){
+                    
+                  e.preventDefault();
+                  
+                  var aa = new FormData();
+
+                  aa.append('username', $('#username').val());
+                  aa.append('password', $('#password').val());
+
+                  fetch('test.php', {method : 'POST', body: aa, cache: 'no-cache'})
+                  .then(response => {
+                    if(response.ok){
+                      $('#username').val('');
+                      $('#password').val('');
+                      return response.text();
+                    }else{
+                      throw('An ocurred an error to send data');
+                    }
+                  }).then(text => console.log(text))
+                  .catch(function(e){alert(e)});
+
+              });
