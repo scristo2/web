@@ -1,0 +1,23 @@
+ function autoGrowGenearlChat(){
+
+                 $('.App-input-general').on('keyup', function(e){
+                      
+                    
+                      var inputGeneral = document.querySelector('.App-input-general');
+                      var saltLines= inputGeneral.value.split('\n').length ; //te cuenta cada vez que saltas de linea;
+                      if(saltLines == 0){
+                          saltLines = 1;
+                      }if(saltLines > 5){
+                          saltLines = 5;
+                      }
+                      var newHeightInputGeneral = 'calc(' + (saltLines * 16) + 'px + 2vmin)';
+
+                      $('.App-input-general').css({
+
+                          height : newHeightInputGeneral
+                      });
+                      
+                      
+                      
+                 });
+             }
