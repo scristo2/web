@@ -1,0 +1,73 @@
+<script type="text/javascript" defer>
+          window.onload = function(){
+
+                  
+                  
+                  var cars = ['mercedes']; 
+                  var match = document.querySelector('#match'); //div
+                  var search = document.querySelector('#search'); //input text
+
+                  search.addEventListener('keyup', function(){
+
+                       
+                          var aa = ['mercedes e 320', 'mercedes 550', 'renault', 'renault clio' ,'audi', 'audia 3', 'bmw', 'bmw 320'];
+                          var result = [];
+                          for (let index = 0; index < aa.length; index++) {
+                               
+                                if(search.value === ""){
+                                  
+                                    console.log('empty');
+
+                                }else{
+                                            
+                                  if(aa[index].indexOf(search.value) === 0){
+
+                                         console.log('match');
+
+                                         if(!result.includes(aa[index])){
+
+                                              result.push(aa[index]);
+                                         }else{
+
+                                            result.pop(result.indexOf(aa[index]));
+                                         }
+                                              
+                                         
+
+                                  }else{
+
+                                        console.log('nop');
+                                        if(result.indexOf(aa[index]) === 0){
+
+                                              result.pop(result.indexOf(aa[index]));
+                                              console.log('esta borrado ' + aa[index]);
+                                        }
+                                        
+                                  }
+
+                                }
+                            
+                          }
+
+
+                         for (let index = 0; index < result.length; index++) {
+                             
+                              $(match).append("<li>" + result[index] + "</li>")
+                           
+                         }
+
+                         
+                         console.log(result);
+                       
+                  });
+
+
+
+                  search.addEventListener('keydown', function(){
+                    $('li').each(function(index){
+                           $(this).remove();
+                         });
+                  });
+               
+         }
+     </script>
