@@ -1,0 +1,3 @@
+var getScrollInputGeneral = function(){
+   return inputGeneral.scrollHeight > inputGeneral.clientHeight; ///return boolean
+  }
