@@ -1,0 +1,9 @@
+#https://keycode.info/
+var lettterClick = event.which || event.keyCode; // all browser
+$(test).on('keydown', function(e){
+     
+       if(e.key === 8){
+           
+            consoloe.log('yoy have clicked remove');
+       }
+});
