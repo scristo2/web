@@ -1,3 +1,6 @@
+###para el coomit y push, usar el token privado creado desde configuracion,no olvidar fecha de caducidad
+###settings -> developer settings -> personal access token -> generate new token -> , hacer click en repo(todo) y admin:repo_hook solo click en read:repo_hook(el principal y el primero no)  
+
 1º-accedemos a la carpeta desde la terminal.
 2º-escribimos (git clone) mas la url del projecto ej https://github... que se puede obtener en github.
 
