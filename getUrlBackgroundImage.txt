@@ -1,0 +1,4 @@
+console.log($('.).css('webkit-mask-image));
+
+####get image url
+consloe.log($('.).prop('src'));
