@@ -1,0 +1,74 @@
+###var initial = performance.now();
+##function xxx();
+#var final = performance.now();
+#console.log('ha tardado ' + (final - initial) + 'ms');
+<script type="text/javascript" defer>
+       window.onload = function(){
+
+              function test(){
+
+                  var mm = document.querySelector('#root');
+
+                  var image = document.createElement('img');
+
+                  image.setAttribute('id', 'test');
+
+                  image.src = '/src/images/charging.gif';
+
+                  image.style.width = '200px';
+                  image.style.height = '200px';
+
+                  mm.appendChild(image);
+
+                  return new Promise(function(resolve, reject){
+
+                       fetch('./tests1.html')
+                       .then(response => {
+
+                           if(!response.ok){
+                                
+                                reject('error 404')
+                           }else{
+                                setTimeout(() => {
+                                    resolve(response.text());
+                                }, 3000);
+                           }
+                       });
+                  });
+
+                    
+            }
+
+
+              async function result(){
+
+                  var result = await test();
+                  return result;
+              }
+
+              var aa = performance.now();
+
+              $('#click').on('click', function(){
+
+                test().then(function(result){
+
+
+                  var vv = performance.now();
+
+                  console.log('ha tardado ' + (vv - aa) + 'segundos');
+
+                  console.log(result);
+
+                  $('#test').remove();
+
+                }).catch(function(error){
+
+                     $('#test').remove();
+                     alert(error);
+                });
+              
+            });
+              
+             
+       }
+    </script>
