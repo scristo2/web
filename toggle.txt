@@ -1,0 +1,6 @@
+///add new name class to div <div id="root" class=" clases classs"></div>
+ var aa = document.querySelector('#root').classList;
+
+ var ss = aa.toggle('muajaja');
+ console.log(aa); <<<< clases classs muajaja
+ $('.muajaja').append('<p>this is ne w class</p>');
