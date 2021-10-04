@@ -1,0 +1,10 @@
+##trigger is like a $('').click();
+$('#test').on('click', function(e, primero, segundo){
+
+    console.log(primero + segundo); <<<< 300
+ });
+
+
+$('#foo').on('click', function(){
+     $('#test').trigger('click', [100, 200]);
+});
