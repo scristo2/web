@@ -1,0 +1,5 @@
+ if(window.navigator.userAgent.toString().toLocaleLowerCase().indexOf('msie') ##old version internet explorer > -1 || 
+   window.navigator.userAgent.toString().toLocaleLowerCase().indexOf('trident') ##new version internet explorer > -1){
+
+            document.write('<p>This browser is not compatible with this app</p>');
+        }
