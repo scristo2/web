@@ -3,7 +3,18 @@
 var xhr = new XMLHttpRequest();
 xhr.open('POST', 'https://serveratlantic.com', true);
 xhr.onreadystatechange = function(){ //has a some status code,when change get
-  console.log(this.response);
+  if(this.readyState == 4){
+        
+        if(this.status == 200){      ####################hacerlo asi en todas,mas abajo el if esta segido pero esta mal,hacerlo asi
+             
+              console.log(this.responseText());
+              
+              
+        }else{
+          
+             console.log('Han ocurred an error');
+        }
+  }
 };
 xhr.send();##send to server to url destiny
 
