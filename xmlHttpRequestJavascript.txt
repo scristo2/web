@@ -7,7 +7,7 @@ xhr.onreadystatechange = function(){ //has a some status code,when change get
         
         if(this.status == 200){      ####################hacerlo asi en todas,mas abajo el if esta segido pero esta mal,hacerlo asi
              
-              console.log(this.responseText());
+              console.log(this.responseText);
               
               
         }else{
