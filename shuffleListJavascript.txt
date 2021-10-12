@@ -1,0 +1,2 @@
+var aa = [4,5,7,9, 23,1, 2];
+console.log(aa.sort(function(){return Math.random() - 0.5}));
