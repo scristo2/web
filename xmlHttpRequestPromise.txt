@@ -1,0 +1,61 @@
+ //1
+    getPrincipalCode(){
+
+        return new Promise(function(resolve, reject){
+
+
+              var xhr = new XMLHttpRequest();
+              xhr.open('GET','./src/principal/index.html',true);
+              xhr.onload = function(){
+                               //use onload
+                  if(xhr.readyState == 4 && xhr.status == 200){
+
+                          setTimeout(() => {
+                              resolve(xhr.responseText);
+                          }, 100);      
+
+                  }else{
+
+                     setTimeout(() => {
+                         reject({statusError : this.status, readyStateError : this.readyState});
+                     }, 100);
+                  }
+              }
+              xhr.ontimeout = function(){
+
+                 setTimeout(() => {
+                    reject({statusError : this.status, readyStateError : this.readyState});
+                 }, 100);
+              }
+              xhr.onerror = function(){
+
+                 setTimeout(() => {
+                    reject({statusError : this.status, readyStateError : this.readyState});
+                 }, 100);
+              }
+              xhr.send(null);
+        });
+    }
+
+
+
+    async afterGetPrincipalCode(){
+
+        var result = await this.getPrincipalCode();
+        return result;
+    }
+
+
+    insertPrincipalCode(){
+
+
+         this.afterGetPrincipalCode().then(function(resolve){
+             document.write(resolve)
+            
+            }, 
+             function(reject){
+
+                 document.write('status is ' + reject['statusError'] + " and readyState is " +  reject['readyStateError']);
+                
+        });
+    }
