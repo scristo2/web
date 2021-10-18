@@ -1,0 +1,12 @@
+$('.App-menu-elements').each(function(index, element){
+
+           $(this).on('click', function(){
+
+                switch(parseInt(index)){
+
+                    case 0://home
+                        alert(element.getAttribute('class')); ///get class
+                        break;
+                }
+           });
+      });
