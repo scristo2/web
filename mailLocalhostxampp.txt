@@ -1,0 +1,42 @@
+https://www.milople.com/blogs/how-to-send-mail-from-localhost-xampp-using-gmail/
+
+Open the XAMPP installation directory.
+
+2: Navigate php.ini file from C:\xampp\php
+
+3: Press ctrl + f to find the mail function
+
+4: Search & pass the below-mentioned values.
+
+› SMTP=smtp.gmail.com
+
+› smtp_port=587
+
+› sendmail_from = milopleInc@gmail.com  /*Your gmail id*/
+
+› sendmail_path = "\"C:\xampp\sendmail\sendmail.exe\" -t"
+
+<---------------
+
+5: Open sendmail.ini file from C:\xampp\sendmail.
+
+6: Press ctrl + f & find sendmail.
+
+7: Search & pass the below-mentioned values.
+
+› smtp_server=smtp.gmail.com
+
+› smtp_port=587
+
+› error_logfile=error.log
+
+› debug_logfile=debug.log
+
+›  auth_username=milopleInc@gmail.com  /*Your Gmail id*/
+
+› auth_password=**********  /*Your Gmail password*/
+
+›  force_sender=milopleInc@gmail.com  /*Optional*/
+
+<------**** permit que el gmail a apliacaciones poco seghuras,logate en gooogle con tu gmail y luego haz click aqui, si no lo permites, no se enviaran
+https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4OnBAt6eKwz24gB_AIF34fvWPNEupft4zXZJSf06ujOU5kqOOOoyxsFykf9Av4sTUgqwkoGAJ2ZOcFQHcP-BliIUZeXPA
