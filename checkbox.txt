@@ -1,0 +1,7 @@
+$('#checkRegister').prop('checked', false); // or true if you want select it
+
+<?php
+if($_POST['check']){
+ echo "checked";
+}
+?>
