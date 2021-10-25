@@ -1,5 +1,45 @@
 #read all bellow
 
+#send data form
+ var xhr = new XMLHttpRequest();
+ xhr.open('POST', url, true);
+ xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); <<<<<<<<importante
+ xhr.onload = function(){
+
+ if(xhr.readyState == 4 && xhr.status == 200){
+
+                         setTimeout(() => {
+                             resolve(xhr.responseText);
+                         }, timeout);
+                     
+      }else{
+
+                        setTimeout(() => {
+                            reject({responseErrorStatus : this.status, responseErrorReadyState : this.readyState});
+                        }, timeout);
+                    }
+                  }
+
+                  xhr.ontimeout = function(){
+
+                     setTimeout(() => {
+                        reject({responseErrorStatus : this.status, responseErrorReadyState : this.readyState});
+                     }, timeout);
+                  }
+
+                  xhr.onerror = function(){
+
+                     setTimeout(() => {
+                        reject({responseErrorStatus : this.status, responseErrorReadyState : this.readyState}); 
+                     }, timeout);
+                  }
+
+                  xhr.send($(form).serialize()); <<<<<<<<importante
+            });
+
+
+<------
+
 var xhr = new XMLHttpRequest();
 xhr.open('POST', 'https://serveratlantic.com', true);
 xhr.onreadystatechange = function(){ //has a some status code,when change get
