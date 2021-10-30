@@ -1,0 +1,27 @@
+ var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'http://ip-api.com/json/83.58.172.74', true);
+        xhr.timeout = 2000;
+        xhr.onload = function(){
+
+            if(xhr.readyState == 4 && xhr.status == 200){
+
+               var result = JSON.parse(xhr.responseText);
+               
+               alert(result['region']);
+
+            }else{
+
+                alert('ha ocurridooo un error');
+            }
+        };
+
+        xhr.ontimeout = function(){
+
+             alert('ha exiprado el timepo de ejecucuion');
+        }
+
+        xhr.onerror = function(){
+            alert('ha ocurrido123 un error');
+        };
+
+        xhr.send(null);
