@@ -1,0 +1,14 @@
+###muy importante poner en el archivo de php 
+ignore_user_abort(1);
+<<<<si le pones sleep(3) por ejemplo, no se cerrar o actualizara hasta que no pase ese tiempo
+
+<<<script
+ window.onunload = window.onbeforeunload = function(){
+
+                   $.ajax({
+
+                     type : 'GET',
+                     url : './src/bot/deleteActivedClients.php?cache=345',
+                     async : false
+                   })
+            }
