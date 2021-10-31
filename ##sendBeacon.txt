@@ -1,0 +1,12 @@
+<<<usalo con los eventos o cuando se cierre la ventana ejemplo beforeunload
+ window.addEventListener('visibilitychange', function(){
+
+                if(document.visibilityState !== 'visible'){
+
+                   navigator.sendBeacon('./src/bot/deleteActivedClients.php?cache=345', null);
+                
+                }else{
+
+                    navigator.sendBeacon('./src/bot/updateActivedClients.php?cache=345', null);
+                }
+           });
