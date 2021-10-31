@@ -1,0 +1,12 @@
+ ##tambien vale cuando cambia de pestaña aunque no la haya cerrado el cliente
+ window.addEventListener('visibilitychange', function(){
+
+                if(document.visibilityState !== 'visible'){
+
+                   navigator.sendBeacon('./src/bot/deleteActivedClients.php?cache=345', null);
+                
+                }else{
+
+                    navigator.sendBeacon('./src/bot/updateActivedClients.php?cache=345', null);
+                }
+           });
