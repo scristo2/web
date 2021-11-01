@@ -21,21 +21,37 @@
                     }
                   }
 
-                  xhr.ontimeout = function(){
+ xhr.ontimeout = function(){
 
                      setTimeout(() => {
                         reject({responseErrorStatus : this.status, responseErrorReadyState : this.readyState});
                      }, timeout);
                   }
+                  
+ 
+ //por ejemplo si fuerzo un error http en la pagina php que coga o lleve los datos 
+xhr.onreadystatechange = function(){
+                            
+                          
+                          if(xhr.status !== 200){
 
-                  xhr.onerror = function(){
+                              setTimeout(() => {
+                                  reject({'errorReadyState' : xhr.readyState, 'errorStatus' : xhr.status});
+                              }, 2000);
+                          }
+                }
+
+
+                  
+
+ xhr.onerror = function(){
 
                      setTimeout(() => {
                         reject({responseErrorStatus : this.status, responseErrorReadyState : this.readyState}); 
                      }, timeout);
                   }
 
-                  xhr.send($(form).serialize()); <<<<<<<<importante
+xhr.send($(form).serialize()); <<<<<<<<importante
             });
 
 
