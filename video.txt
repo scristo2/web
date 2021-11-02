@@ -9,3 +9,22 @@
  
  ##when finished
  video.addEventListener('ended', function(){alert('acabo')});
+ 
+ ##get time total video
+ alert(video.duration)
+ 
+ 
+ ##error src vide or something error
+ <div class="videoDiv">
+        <video id="video" autoplay muted>
+         <source id="aa" src="conSonido.3gp" type="video/3gp">
+         this video is not compatibe with this browser
+         </video>
+          <script type="text/javascript">
+           var video = document.getElementById('video');
+           var source = document.querySelector('#aa');
+          
+           source.addEventListener('error', function(){alert("no se ha podido cargar el video")}); <<<<<<<<<<<<<<<this
+             
+        </script>
+     </div>
