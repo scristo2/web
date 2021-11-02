@@ -1,0 +1,7 @@
+##loop=> es cuando se acabe u si es true se vuelve a reproducir
+##autoplay=>"tiene que estar enmute con muted, si no no se reproduce"
+
+<video id="video" loop="true" autoplay="autoplay" muted>
+     <source src="conSonido.mp4" type="video/mp4">
+      this video is not compatibe with this browser
+ </video>
