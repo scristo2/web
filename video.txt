@@ -5,3 +5,7 @@
      <source src="conSonido.mp4" type="video/mp4">
       this video is not compatibe with this browser
  </video>
+ 
+ 
+ ##when finished
+ video.addEventListener('ended', function(){alert('acabo')});
