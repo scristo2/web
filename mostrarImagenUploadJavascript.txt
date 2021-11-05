@@ -7,6 +7,7 @@ $(document).ready(function(){
 
           var preview = document.getElementById('preview');
           preview.src = URL.createObjectUrl(event.target.files[0]);
+          alert(event.target.files[0].name); ///show name uploaded file;<<<<<
       });
 
 });
