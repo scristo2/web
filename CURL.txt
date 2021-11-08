@@ -2,7 +2,7 @@
 
 #muy importante si quieres el codigo el  curl_setopt($code, CURLOPT_RETURNTRANSFER, 1);
 #crea un fichero con open para leer el codigo
-
+###<<< leer abajo
 
  $cliente = curl_init();
  curl_setopt($cliente,CURLOPT_URL,'https://molestator.com/login');
@@ -32,3 +32,26 @@ $file = $_SERVER['DOCUMENT_ROOT'] . "/cookies.txt";
  }
 
 ?>
+---------
+try{
+     $curl = curl_init();
+curl_setopt($curl,CURLOPT_URL,  "http://test3.php");
+curl_setopt($curl, CURLOPT_HEADER, 0);
+curl_setopt($curl,CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($curl, CURLOPT_FRESH_CONNECT, 1);
+curl_setopt($curl, CURLOPT_FAILONERROR, 1);///manejas tu el error, en este caso si lo quitas aparece el error 404 not found url
+$result = curl_exec($curl);
+//$info = curl_getinfo($curl);
+if(curl_error($curl)){
+
+     throw new Exception(curl_error($curl));
+}
+curl_close($curl);
+
+echo $result;
+
+
+}catch(\Throwable $th){
+
+     echo $th->getMessage();
+}
