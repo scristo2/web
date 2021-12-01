@@ -42,7 +42,7 @@ curl_setopt($curl, CURLOPT_FRESH_CONNECT, 1);
 curl_setopt($curl, CURLOPT_FAILONERROR, 1);///manejas tu el error, en este caso si lo quitas aparece el error 404 not found url
 $result = curl_exec($curl);
 //$info = curl_getinfo($curl);
-if(curl_error($curl)){
+if(curl_errno($curl)){ ///###errno
 
      throw new Exception(curl_error($curl));
 }
