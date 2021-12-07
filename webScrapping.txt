@@ -1,0 +1,24 @@
+##https://diego.com.es/expresiones-regulares-en-php
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_URL, url); 
+curl_setopt($curl,CURLOPT_HEADER, 0);
+curl_setopt($curl, CURLOPT_FRESH_CONNECT, 1);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($curl, CURLOPT_FAILONERROR, 1);
+
+$result = curl_exec($curl);
+if(curl_errno($curl)){
+  echo "an ocurred an error";
+}
+curl_close($curl);
+
+if(preg_match_all('/<span class="ranking">(.*)<\/span>/', $result, $final)){
+
+   for ($i=0; $i < count($final); $i++) { 
+      
+    echo $final[$i][$i] . "<br>";
+   }
+
+}else{
+  echo "nop";
+}
