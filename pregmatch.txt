@@ -1,3 +1,5 @@
+###https://diego.com.es/expresiones-regulares-en-php
+
 $texto = "me llamo sergio y tengo 27 años";
 
 $result = preg_match("/^[a-z]+.[a-z]+.[a-z]+.[a-z]/", $texto, $aa);
