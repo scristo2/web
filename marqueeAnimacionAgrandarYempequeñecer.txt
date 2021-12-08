@@ -20,3 +20,37 @@
     font-size: 32px;
    }
 }
+
+
+#####mostar por ejemplo loading ... y que los puntos desaprezcan y se muestren
+.text{
+
+    color: white;
+    margin-bottom: 2vmin;
+    font-size: 10vmin;
+}
+
+
+.a, .b, .c{
+
+    animation: aaa 1s linear infinite normal;  
+}
+
+
+
+
+@keyframes aaa {
+
+
+    from{
+
+        opacity: 10%;
+    }
+
+
+    to{
+
+        opacity: 100%;
+    }
+    
+}
