@@ -1,3 +1,4 @@
+###form send get bellow
 #read all bellow
 
 #send data form
@@ -118,3 +119,24 @@ xhr.send();##send to server to url destiny
 --json
 fetch("test.json").then(response => response.json())
 .then(data => console.log(data['coches']['mercedes']['claseA'][0]['claseA2001']['motor']));
+
+
+###send form get 
+$('#aa').submit(function(e){
+
+           e.preventDefault();
+
+           var xhr = new XMLHttpRequest();
+           xhr.open('GET', 'test.php?test=123&&name=sergio', true);
+           xhr.onload = function(){
+              
+               alert(xhr.responseText);
+           }
+
+           xhr.send(null);
+          
+          });
+          
+##y luego en el php
+<?php 
+echo $_GET['name'] . "***" . $_GET['test'];
