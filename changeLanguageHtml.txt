@@ -1,0 +1,8 @@
+<html>#sin lang
+.....
+<body>
+ <scipt>
+  document.documentElement.lang = 'en'; o x ejemplo 'es' o  window.navigator.language
+ </script>
+</body>
+</html>
