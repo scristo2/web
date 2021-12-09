@@ -1,0 +1,40 @@
+##pro defecto es el purto :80, pero si vas a xampp/apache/conf/extra/httpd-vhost.conf y a uno de los proyectos le cambia sel port por 443,
+cuando desde el oto dispositivo buscas la ip $(ip) sale automaticamente el principal, y es el 80,pero lo buscas asi $(ip):443 y ya te lleva al otro dispositvo
+
+ej :
+<VirtualHost *:80>
+  DocumentRoot "C:/xampp/htdocs/template"
+  ServerName localhost.com
+
+  <Directory "C:/xampp/htdocs/template">
+   AllowOverride All
+   Require all granted
+  </Directory>
+
+</VirtualHost>
+
+
+<VirtualHost *:443>
+
+  DocumentRoot "C:/xampp/htdocs/comparator"
+  ServerName comparator.com
+
+  <Directory "C:/xampp/htdocs/comparator">
+   AllowOverride All
+   Require all granted
+  </Directory>
+
+</VirtualHost>
+
+<VirtualHost *:80>
+
+  DocumentRoot "C:/xampp/htdocs/leagueOfLegendsPremium"
+  ServerName leagueOfLegendPremiumCom.COM
+
+  <Directory "C:/xampp/htdocs/leagueOfLegendsPremium">
+   AllowOverride All
+   Require all granted
+  </Directory>
+
+</VirtualHost>
+
