@@ -1,3 +1,6 @@
+##mirar abajo para redireccionar por lenguaje del servidor
+
+
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f 
@@ -53,3 +56,60 @@ RewriteRule .* /temporal.php [R=302,L]
 </IfModule>
 
 RewriteRule ^payments-more10000-apis/(.*)$ payments-more10000-apis.php?username=$1 --esto
+
+
+-----------
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f 
+RewriteRule ^(.*)$ $1.php
+
+
+###redirigir por idioma
+
+##español
+#RewriteCond %{HTTP:Accept-Language} ^es [NC]
+#RewriteRule ^(.*)$ https://leagueoflegendspremium.es [R,NC,L]
+
+#frances
+#RewriteCond %{HTTP:Accept-Language} ^fr [NC]
+#RewriteRule ^(.*)$ https://fr.leagueoflegendspremium.com [R,NC,L]
+
+#para todos los demas
+
+RewriteRule ^/?$ /index?language=en [R,NC,L]
+
+#redirigir errores 403,404 a pagina error echa por mi
+
+ErrorDocument 404 https://leagueoflegendspremium.com
+
+ErrorDocument 403 https://leagueoflegendspremium.com
+
+#para que no puedan ver los directorios
+<IfModule mod_rewrite.c>
+  <IfModule mod_negotiation.c>
+     Options -Multiviews -Indexes
+     </IfModule>
+</IfModule> 
+
+
+#no cache css or other files
+
+<FilesMatch "\.(css|flv|gif|htm|html|ico|jpe|jpeg|jpg|js|mp3|mp4|png|pdf|swf|txt)$">
+    <IfModule mod_expires.c>
+        ExpiresActive Off
+    </IfModule>
+    <IfModule mod_headers.c>
+        FileETag None
+        Header unset ETag
+        Header unset Pragma
+        Header unset Cache-Control
+        Header unset Last-Modified
+        Header set Pragma "no-cache"
+        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+        Header set Expires "jue, 1 Jan 1970 00:00:00 GMT"
+    </IfModule>
+</FilesMatch>
+
+
