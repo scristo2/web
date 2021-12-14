@@ -10,5 +10,5 @@ outline: none !important;
 
     text-area{
        
-    resizable:false;
+    resize: none;
    }
