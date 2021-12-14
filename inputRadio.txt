@@ -1,0 +1,26 @@
+##html
+<div class="App-content-div-form-input-div-radio-separator">
+      <input type="radio" id="second" value="https://leagueoflegendspremium.com" class="radio">
+     <label class="labelRadio" for="second">https://leagueoflegendspremium.es</label> 
+</div> 
+
+##marcarlos y deseleccionarlos
+ $(listInputsRadio).each(function(index, element){
+
+                 $(this).on('click', function(){
+
+
+                      if($(listLabelRadio[index]).css('color') === "rgb(0, 0, 0)"){
+
+                           $(listLabelRadio[index]).css({'color' : 'red'});
+
+                           
+                      
+                      }else{
+
+                           $(listInputsRadio[index]).prop('checked', false);
+                           $(listLabelRadio[index]).css({'color' : 'black'});           
+                           
+                      }
+                 });
+            });
