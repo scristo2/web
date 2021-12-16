@@ -1,0 +1,12 @@
+var oReq = new XMLHttpRequest();
+oReq.open("GET", "/src/bot/test.php", true);
+oReq.responseType = "blob";
+
+oReq.onload = function(oEvent) {
+var blob = oReq.response;
+$("#bb").prop("href",URL.createObjectURL(blob)
+};
+
+oReq.send();
+
+###añadir un blob a un <a></a> para cuando clicke vaya a test.php
