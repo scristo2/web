@@ -1,0 +1,31 @@
+###tiene que haber un par de ellas,si no no se nota
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+<?php
+  $aa = scandir($_SERVER['DOCUMENT_ROOT'] . "/src/images/borrar", SCANDIR_SORT_DESCENDING);
+  $bb = array();
+  for ($i=0; $i < count($aa) ; $i++) {
+      
+     array_push($bb, $aa[$i]);
+
+     if($i >= count($aa) - 3){
+
+        break;
+     }
+      # code...
+  }
+
+  for ($i=0; $i < count($bb) ; $i++) { 
+     
+      echo '<img src="/src/images/borrar/' . $bb[$i] . '" width="200" height="200" loading="lazy"><br>';
+  }
+?>
+</body>
+</html>
