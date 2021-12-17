@@ -1,0 +1,4 @@
+input:-webkit-autofill{
+
+     -webkit-background-clip: text; ###con esto no tiene color d efondo el autocompletado
+  }
