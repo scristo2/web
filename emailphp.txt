@@ -1,3 +1,31 @@
  $header = "MIME-Version : 1.0" . "\r\n";
  $header .= "Content-type:text/html;charset=UTF-8" . "\r\n";
  $header .= 'From: <web@molestator.com>' . "\r\n" .'CC: web@molestator.com';
+ 
+ ------------
+ 
+  $headers = "MIME-Version: 1.0" . "\r\n";
+                              $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+                              $headers .= "";
+
+                              $subject = "Verify email";
+
+                              $message = '<!DOCTYPE html>
+                              <html lang="en">
+                              <head>
+                                  <meta charset="UTF-8">
+                                  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                  <title>Verify email</title>
+                              </head>' . 
+                              '<body>' .
+                              '<h1>Hello '. $usernameRegister . ':</h1>'.
+                              '<p>You have just registered and to be able to access your account you just have to verify it by <span><a href="' . 
+                              $futurePathVerifyEmailDomain .'">click here</a></span></p>' . 
+                              '<hr>'.
+                              '</body>' . 
+                              '<footer style="text-align:center";>' . 
+                              '<div style="text-align:center;">' . 
+                              '<p>This email was sent to <span style="color:blue;text-decoration:underline;">' . $emailRegister . '</span></p>'.
+                              '</div>'.
+                              '</footer>';
