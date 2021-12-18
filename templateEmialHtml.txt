@@ -1,0 +1,8 @@
+##https://webdesign.tutsplus.com/es/articles/creating-a-simple-responsive-html-email--webdesign-12978
+##PUIDES COPIAR ALGUNAS PLANTILLAS DE INTERNET,
+
+<<<muy importnate,cuando lo hagas,escribes en el temoplate html del email por ejemplo dode quieres que vaya el nombre del cliente, y le pones {nameClient}
+y lego en el archvi php cuando obtengas el texto con filegetcontents o curl,  haces esto:
+$message = file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/src/verify/templateEmail.html");
+$message = str_replace("{emaiClient}", $_POST['emailClient'], $message);
+asi ya tiene todas las variables.
