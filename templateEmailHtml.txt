@@ -6,3 +6,8 @@ y lego en el archvi php cuando obtengas el texto con filegetcontents o curl,  ha
 $message = file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/src/verify/templateEmail.html");
 $message = str_replace("{emaiClient}", $_POST['emailClient'], $message);
 asi ya tiene todas las variables.
+
+Produce: You should eat pizza, beer, and ice cream every day
+$phrase  = "You should eat fruits, vegetables, and fiber every day.";
+$healthy = array("fruits", "vegetables", "fiber");
+$yummy   = array("pizza", "beer", "ice cream");
