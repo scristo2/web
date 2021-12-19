@@ -1,0 +1,1 @@
+$(listPlaceholder[index]).css({color : '#ffffff00'});
