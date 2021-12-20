@@ -1,0 +1,26 @@
+##https://todoxampp.com/como-configurar-varios-puertos-xampp/
+Pasos para configurar varios puertos Xampp
+Si tienes muchos proyectos y deseas configurar uno con un puerto diferente en Xampp llamado, por ejemplo, «hosts virtuales«, aquí se explica cómo configurar el host virtual en xampp con un puerto diferente.
+
+1. Actualizar «C:\xampp\apache\conf\httpd.conf» agregando el nuevo puerto de escucha.
+
+Listen 80
+Listen 81 // new listening port
+2. Editamos«C:\xampp\apache\conf\extra\httpd-vhosts.conf» agregar una nueva configuración de host virtual.
+
+Cómo configurar varios puertos Xampp
+<VirtualHost *:81>
+  DocumentRoot "C:\xampp\htdocs/lolpremium"
+  ServerName leagueoflegendspremium.com
+  <Directory "C:\xampp\htdocs/lolpremium">
+      Options -Indexes +FollowSymLinks +MultiViews
+     AllowOverride
+    Require all granted
+  </Directory>
+</VirtualHost>
+«C:\Windows\System32\drivers\etc\hosts» agregue nuevo host y puerto a este archivo.
+
+# 127.0.0.1       localhost
+    # ::1             localhost
+    127.0.0.1      127.0.0.1:81 // host with new port.
+4. Reinicia Apache nuevamente e intente una nueva dirección en el navegador.
