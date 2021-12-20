@@ -1,0 +1,31 @@
+#https://polyfill.io/v3/url-builder/
+##lo que hace polifill es adaptar el codfio a los navegadors antiguos como internet explorer,si en este ejemplo de bajo quitas el script del head de polifyll no funciona,hay mas 
+parametros que puedes ver en la url de arriba
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=fetch"></script>
+</head>
+<body>
+   <script  type="text/javascript" defer>
+     fetch("./hola.txt", {method : 'GET'})
+.then(function(response) {
+
+    if(response.ok){
+
+         return response.text();
+    
+    }else{
+
+        throw "se ha producio un error";
+    }
+})
+.then(function(text){alert(text)})
+.catch(function(e){alert(e)});
+   </script>
+</body>
+</html>
