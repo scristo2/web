@@ -1,0 +1,4 @@
+DirectoryIndex index.html index.php test.html test.php
+<<lo que le dices es si quieres cambiar el princiapl, lo pnes asi y te ir buscando las opciones qu epongas y te pone el primero que encuentre el servidor apache
+si no encuentr aninguno te sale todos los directorios para que elijas o te response con un htt_response_code(403) forbidden
+--------
