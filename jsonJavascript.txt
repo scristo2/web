@@ -1,0 +1,12 @@
+stringify convierte un objeto JavaScript en texto JSON y almacena ese texto JSON en una cadena. JSON. parse convierte una cadena de texto JSON en un objeto JavaScript.
+
+var aa = new Object();
+aa.name = 'sergio';
+aa.age = 27;
+--ooooo-
+var aa = {name : 'sergio, age : 27};
+
+
+const client = JSON.stringify(aa);  //pasamos un string a cadena de texto json
+
+alert(JSON.parse(client).name);//pasamos el json a objecto javascript para obtener el value
