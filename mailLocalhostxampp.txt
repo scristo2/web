@@ -36,7 +36,9 @@ Open the XAMPP installation directory.
 
 › auth_password=**********  /*Your Gmail password*/
 
-›  force_sender=milopleInc@gmail.com  /*Optional*/
+›  force_sender=milopleInc@gmail.com  ***importante
+
+<<<<<y para qu eno vaya a spam poner esto en tu php $header .= 'From: <sergiopokerstar4@gmail.com>';
 
 <------**** permit que el gmail a apliacaciones poco seghuras,logate en gooogle con tu gmail y luego haz click aqui, si no lo permites, no se enviaran
 https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4OnBAt6eKwz24gB_AIF34fvWPNEupft4zXZJSf06ujOU5kqOOOoyxsFykf9Av4sTUgqwkoGAJ2ZOcFQHcP-BliIUZeXPA
