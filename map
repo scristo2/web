@@ -1,0 +1,6 @@
+var aa = [23, 45];
+
+var ss = aa.map(function(num){ 
+
+    return Math.sqrt(num);  //dvuelve la raiz cuadrada de 23 y de 45 pero pudeo devolver cialquier cosa que le añadas al return
+});
