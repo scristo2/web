@@ -1,0 +1,13 @@
+var aa = [23, 45];
+
+var ss = aa.map(function(num){
+
+    return Math.sqrt(num);
+});
+
+
+alert(ss);
+
+ooooo
+
+alert(Math.sqrt(34));
