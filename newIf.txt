@@ -1,0 +1,3 @@
+this.gg = true;
+
+this.gg ? alert('true') : alert('false') //si es true alert(true) y si es false ALERT(false)
