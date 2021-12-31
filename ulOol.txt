@@ -1,0 +1,9 @@
+<ol> es list aordenada tiene type por ejemplo para ponerlos en numeros romanos o letras y tambien start para saber de que numero empieza  ordenar
+ <ol type="I" start={1}>
+               <li><Link href={"/"}><a>Home</a></Link></li>
+               <li><Link href={"/about"}><a>About</a></Link></li>
+               <li><Link href={"/services"}><a>Services</a></Link></li>
+</ol>
+
+
+<ul> lista desorneda 
