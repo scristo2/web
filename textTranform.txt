@@ -1,0 +1,3 @@
+.a{
+    text-tranform : lowercase; #todo a minusculas -> uppercase #todo a mayusculas -> capitalize #de cada palabra la primera letra a mayuscula
+}
